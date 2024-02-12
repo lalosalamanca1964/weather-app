@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', async event => {
 
 async function getWeatherData(city) {
     try {
-        const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${5}&appid=${apiKey}`;
+        const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${5}&appid=${apiKey}`;
         const geoResponse = await fetch(geoUrl);
         if (!geoResponse.ok) {
             throw new Error('Could not fetch geographical data');
